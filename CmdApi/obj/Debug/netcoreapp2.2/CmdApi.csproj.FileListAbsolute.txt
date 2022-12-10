@@ -1,0 +1,14 @@
+C:\Users\user\Desktop\web-api-demo\CmdApi\bin\Debug\netcoreapp2.2\CmdApi.deps.json
+C:\Users\user\Desktop\web-api-demo\CmdApi\bin\Debug\netcoreapp2.2\CmdApi.runtimeconfig.json
+C:\Users\user\Desktop\web-api-demo\CmdApi\bin\Debug\netcoreapp2.2\CmdApi.runtimeconfig.dev.json
+C:\Users\user\Desktop\web-api-demo\CmdApi\bin\Debug\netcoreapp2.2\CmdApi.dll
+C:\Users\user\Desktop\web-api-demo\CmdApi\bin\Debug\netcoreapp2.2\CmdApi.pdb
+C:\Users\user\Desktop\web-api-demo\CmdApi\obj\Debug\netcoreapp2.2\CmdApi.csprojAssemblyReference.cache
+C:\Users\user\Desktop\web-api-demo\CmdApi\obj\Debug\netcoreapp2.2\CmdApi.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\web-api-demo\CmdApi\obj\Debug\netcoreapp2.2\CmdApi.RazorAssemblyInfo.cache
+C:\Users\user\Desktop\web-api-demo\CmdApi\obj\Debug\netcoreapp2.2\CmdApi.RazorAssemblyInfo.cs
+C:\Users\user\Desktop\web-api-demo\CmdApi\obj\Debug\netcoreapp2.2\CmdApi.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\web-api-demo\CmdApi\obj\Debug\netcoreapp2.2\CmdApi.AssemblyInfo.cs
+C:\Users\user\Desktop\web-api-demo\CmdApi\obj\Debug\netcoreapp2.2\CmdApi.RazorTargetAssemblyInfo.cache
+C:\Users\user\Desktop\web-api-demo\CmdApi\obj\Debug\netcoreapp2.2\CmdApi.dll
+C:\Users\user\Desktop\web-api-demo\CmdApi\obj\Debug\netcoreapp2.2\CmdApi.pdb
