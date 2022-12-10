@@ -39,6 +39,16 @@ namespace CmdApi.Controllers
             return commandItem;
         }
 
+        // POST: api/Commands
+        [HttpPost]
+        public ActionResult<Command> PostCommandItem(Command item)
+        {
+            _context.CommandItems.Add(item);
+            _context.SaveChanges();
+
+            return CreatedAtAction("GetCommandItem", new Command {Id = item.Id}, item);
+        }
+
     //     [HttpGet]
     //    public ActionResult<IEnumerable<string>> GetString(){
     //           return new string[] {"This", "is", "hard", "coded"};
