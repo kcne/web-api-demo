@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using CmdApi.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace CmdApi
 {
@@ -18,11 +20,12 @@ namespace CmdApi
         {
             Configuration = configuration;
         } 
-        
+
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<CommandContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("CommandConnection")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
