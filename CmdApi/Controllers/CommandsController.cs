@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using CmdApi.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace CmdApi.Controllers
 {
@@ -48,7 +49,21 @@ namespace CmdApi.Controllers
 
             return CreatedAtAction("GetCommandItem", new Command {Id = item.Id}, item);
         }
+        //HTTP PUT: api/Commands/5
 
+        [HttpPut("{id}")]
+        public ActionResult PutCommandItem(int id, Command command)
+        {
+            if (id != command.Id){
+                return BadRequest();
+            }
+
+            _context.Entry(command).State = EntityState.Modified;
+            _context.SaveChanges();
+
+            return NoContent();
+
+        }
     //     [HttpGet]
     //    public ActionResult<IEnumerable<string>> GetString(){
     //           return new string[] {"This", "is", "hard", "coded"};
