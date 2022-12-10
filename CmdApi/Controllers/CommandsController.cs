@@ -8,25 +8,13 @@ using Microsoft.Extensions.Logging;
 
 namespace CmdApi.Controllers
 {
-    [Route("[controller]")]
-    public class CommandsController : Controller
+    [Route("api/[controller]")]
+    [ApiController]
+    public class CommandsController : ControllerBase
     {
-        private readonly ILogger<CommandsController> _logger;
-
-        public CommandsController(ILogger<CommandsController> logger)
-        {
-            _logger = logger;
-        }
-
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View("Error!");
-        }
+        [HttpGet]
+       public ActionResult<IEnumerable<string>> GetString(){
+              return new string[] {"This", "is", "hard", "coded"};
+       }
     }
 }
