@@ -64,9 +64,21 @@ namespace CmdApi.Controllers
             return NoContent();
 
         }
-    //     [HttpGet]
-    //    public ActionResult<IEnumerable<string>> GetString(){
-    //           return new string[] {"This", "is", "hard", "coded"};
-    //    }
+
+        //HTTP DELETE: api/Commands/5
+        [HttpDelete("{id}")]
+        public ActionResult<Command> DeleteCommandItem(int id)
+        {
+            var commandItem = _context.CommandItems.Find(id);
+            if (commandItem == null)
+            {
+                return NotFound();
+            }
+
+            _context.CommandItems.Remove(commandItem);
+            _context.SaveChanges();
+
+            return commandItem;
+        }
     }
 }
