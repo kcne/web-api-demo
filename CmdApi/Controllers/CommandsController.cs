@@ -20,13 +20,24 @@ namespace CmdApi.Controllers
             _context = context;
         }
         
+        //HttpGet: api/Commands
         [HttpGet]
         public ActionResult<IEnumerable<Command>> GetCommands()
         {
             return _context.CommandItems;
         }
 
-        
+        // GET: api/Commands/5
+        [HttpGet("{id}")]
+        public ActionResult<Command> GetCommandItem(int id)
+        {
+            var commandItem = _context.CommandItems.Find(id);
+            if (commandItem == null)
+            {
+                return NotFound();
+            }
+            return commandItem;
+        }
 
     //     [HttpGet]
     //    public ActionResult<IEnumerable<string>> GetString(){
